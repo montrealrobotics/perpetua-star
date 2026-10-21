@@ -1,0 +1,7 @@
+p_m: 0.1
+p_f: 0.1
+delta_high: 0.95
+delta_low: 0.05
+eps: 0.1
+num_steps: 5
+decay_rate: 1.0

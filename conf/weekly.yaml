@@ -1,0 +1,27 @@
+defaults:
+  - _self_
+  - training: weekly
+  - models: weekly
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+
+# Experiment name
+exp_name: weekly_ablation
+
+# Data
+original_work_dir: ${hydra:runtime.cwd}
+data_path: ${original_work_dir}/data/weekly_schedule
+train_file: train_noise01_4w_seed_123456
+test_file: test_noise01_1w_odd_seed_265464
+
+# Figures, metrics and config go to <results_dir>/train/<model>_seed_<seed>/, fitted models to models_dir
+results_dir: ${original_work_dir}/results/weekly
+models_dir: ${results_dir}/models
+
+seed: 123456
+
+val_time: 10080       # Amount of time from the train set used to determine optimal model order, this is the equivalent of 1w
+mask_periodic: false  # If true, mask the test set in a periodic way
+mask_weekends: false  # If true, mask the test set during weekends
+
+viz: false  # If true, show figures interactively

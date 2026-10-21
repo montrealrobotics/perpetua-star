@@ -1,0 +1,14 @@
+# Time unit: hours.
+# Measurement model: missed-detection and false-alarm probabilities.
+p_m: 0.05
+p_f: 0.05
+# Forgetting factor gamma = eps^(1/H): an observation H steps old keeps weight eps. 0.99 ~ H=250 with eps=0.1.
+decay_rate: 0.990
+# Decay rate alpha: exp(-alpha * t) = 0.01 defers to the switching prior after t = 0.5 h (30 min), i.e. 2.56e-3 1/s.
+alpha: 9.21034
+perpetua_period: 24  # one day
+# FreMEn switching prior.
+num_periodicities: 1000
+fremen_period: 168  # one week
+max_order: 50
+orderi: null

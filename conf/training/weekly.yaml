@@ -1,0 +1,8 @@
+prior: "lognorm"
+n_iter: 200
+prune_threshold: 0.01
+retrain_attempts: 2
+min_components: 1
+max_components: 6    # exclusive: mixtures with min_components..max_components-1 components are compared by AIC
+perturbation_scale: 0.1
+clip_log_means: true  # true reproduces the paper's models; false removes the 1e-3 floor on log-means

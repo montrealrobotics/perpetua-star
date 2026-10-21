@@ -1,0 +1,19 @@
+# Time unit: minutes.
+# Measurement model: missed-detection and false-alarm probabilities.
+p_m: 0.1
+p_f: 0.1
+# Perpetua (baseline) only: switching thresholds, mixing coefficient after a reset and simulation steps.
+delta_high: 0.95
+delta_low: 0.05
+eps: 0.1
+num_steps: 5
+# Forgetting factor gamma = eps^(1/H): an observation H steps old keeps weight eps. 0.99 ~ H=250 with eps=0.1.
+decay_rate: 0.990
+# Decay rate alpha: exp(-alpha * t) = 0.01 defers to the switching prior after t = 300 min (5 h), i.e. 2.55e-4 1/s.
+alpha: 0.0153
+perpetua_period: 1440  # one day
+# FreMEn switching prior.
+num_periodicities: 1000
+fremen_period: 10080  # one week
+max_order: 50
+orderi: null

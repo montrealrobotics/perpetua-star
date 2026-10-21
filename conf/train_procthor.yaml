@@ -1,0 +1,23 @@
+defaults:
+  - _self_
+  - training: procthor
+  - models: procthor
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+
+# Experiment name
+exp_name: procthor
+
+# Data
+original_work_dir: ${hydra:runtime.cwd}
+run_id: ???         # ProcTHOR layout index
+sequence_path: ???  # SemiStaticSim `privileged` folder of the layout, e.g. <data>/semistaticsim/test/<run_id>/0/privileged
+
+# One <object>_object.pkl per object
+output_dir: ${original_work_dir}/estimators/procthor/scene_${run_id}
+results_dir: ${original_work_dir}/results/procthor/scene_${run_id}
+
+seed: 12345
+val_time: 168     # Length of the validation set in hours
+test_time: 168    # Length of the test set in hours
+viz: false        # If true, show figures interactively

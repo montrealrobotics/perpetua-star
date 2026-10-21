@@ -1,0 +1,35 @@
+defaults:
+  - _self_
+  - training: weekly
+  - models: weekly
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+
+# Experiment name
+exp_name: test_weekly_ablation
+
+# Data
+original_work_dir: ${hydra:runtime.cwd}
+data_path: ${original_work_dir}/data/weekly_schedule
+train_file: train_noise01_4w_seed_123456
+test_file: test_noise01_1w_odd_seed_265464
+
+# Fitted models; use results/weekly/models to evaluate models refitted with conf/weekly.yaml
+params_dir: ${original_work_dir}/models/weekly_schedule
+llm_schedule_dir: ${original_work_dir}/models/weekly_schedule  # cached Gemini schedules, llm_schedule_<seed>.json
+# Figures, metrics, predictions and the resolved config go to <results_dir>/<test_file>/<method>/
+results_dir: ${original_work_dir}/results/weekly
+
+seed: 123456
+
+val_time: 10080         # Amount of time from the train set used to determine optimal model order, this is the equivalent of 1w
+mask_periodic: false    # If true, mask the test set in a periodic way
+mask_weekends: false    # If true, mask the test set during weekends
+gt_prior: false         # If true, use ground truth prior
+llm_prior: false        # If true, use LLM-based prior
+fremen: false           # If true, evaluate the FreMEn baseline (the switching prior alone)
+
+skip_every: 15          # Skip every n-th observation in the train set - used to prompt LLM
+model: gemini-pro-latest  # Gemini model used to generate schedules missing from llm_schedule_dir
+
+viz: false  # If true, show figures interactively
