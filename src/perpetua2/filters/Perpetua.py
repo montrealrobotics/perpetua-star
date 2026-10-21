@@ -348,11 +348,6 @@ def _init_filters(state: PerpetuaState) -> PerpetuaState:
     x_grid, y_grid = jnp.meshgrid(num_bf, num_df, indexing="ij")
     pairs = jnp.stack([x_grid.flatten(), y_grid.flatten()], axis=-1)
 
-    # Generate mode (i, j) pair
-    # pairs = jnp.array([jnp.argmax(perpetua_state.ef_state.log_tau), jnp.argmax(perpetua_state.pf_state.log_tau)])[
-    #     None, :
-    # ]
-
     filters = jax.vmap(functools.partial(create_filter, state))(pairs)
 
     return filters

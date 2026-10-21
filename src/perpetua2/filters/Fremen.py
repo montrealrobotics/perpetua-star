@@ -1,4 +1,4 @@
-# Code adopted from https://github.com/Raziel90/pyfremen/blob/master/fremen/tests/test_fremen.py
+# Code adapted from https://github.com/Raziel90/pyfremen/blob/master/fremen/tests/test_fremen.py
 import jax.numpy as jnp
 import jax
 from flax import struct

@@ -138,7 +138,7 @@ def main(args):
     assignments = jnp.argmax(evidence, axis=0)
     belief = jnp.concatenate((persistence_belief[-1:, :], emergence_belief[-1:, :]), axis=0)
     belief = belief[assignments, jnp.arange(belief.shape[1])]
-    # Compute the true persistence of the feature based on the survival and birth prior - plot_mixtures_evidence - plot_mixture_components_evidence
+    # Compute the true persistence of the feature based on the survival and birth prior
     plotter.plot_mixtures_evidence(
         gt_times,
         gt_states,

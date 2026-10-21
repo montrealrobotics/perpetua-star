@@ -1,3 +1,5 @@
+"""JAX port of the persistence filter of Rosen et al. (https://github.com/david-m-rosen/Persistence-Filter)."""
+
 from typing import Dict
 import functools
 from jax import Array

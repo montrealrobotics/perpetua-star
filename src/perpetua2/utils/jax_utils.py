@@ -15,7 +15,7 @@ info = jnp.finfo(dtypes.canonicalize_dtype(jnp.float32))
 posinf = info.max
 neginf = info.min
 
-LOWER_LOGSPACE_BOUND = jnp.log(1e-10)  # neginf #jnp.log(LOWER_PSPACE_BOUND)
+LOWER_LOGSPACE_BOUND = jnp.log(1e-10)
 LOWER_PSPACE_BOUND = jax.lax.exp(LOWER_LOGSPACE_BOUND)
 HIGHER_PSPACE_BOUND = 0.999999
 HIGHER_LOGSPACE_BOUND = jnp.log(HIGHER_PSPACE_BOUND)

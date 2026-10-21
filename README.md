@@ -142,7 +142,7 @@ If you use this code, please cite:
 
 ## Acknowledgements
 
-This code builds on the original [Perpetua implementation](https://github.com/montrealrobotics/perpetua-code). The FreMEn model is adapted from [pyfremen](https://github.com/Raziel90/pyfremen) and the observation simulation in the examples from [Persistence-Filter](https://github.com/david-m-rosen/Persistence-Filter).
+This code builds on the original [Perpetua implementation](https://github.com/montrealrobotics/perpetua-code). The FreMEn model is adapted from [pyfremen](https://github.com/Raziel90/pyfremen). The persistence filter (`perpetua2.filters.PersistenceFilter`) is a JAX port of [Persistence-Filter](https://github.com/david-m-rosen/Persistence-Filter), from which the observation simulation in the examples is also adapted.
 
 ## License
 

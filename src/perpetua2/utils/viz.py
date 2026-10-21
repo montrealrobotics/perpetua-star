@@ -805,7 +805,7 @@ class WeeklyPlotter(Plotter):
                 ls="--",
                 linewidth=0.5,
             )
-            axes[l].set_title(titles[l], fontsize=8)  # , y=0.85)
+            axes[l].set_title(titles[l], fontsize=8)
             # Format x-axis as days of the week
             axes[l].xaxis.set_major_locator(mdates.DayLocator())  # ticks per day
             axes[l].xaxis.set_major_formatter(mdates.DateFormatter("%a"))  # Mon, Tue, ...
@@ -1015,7 +1015,7 @@ class ProcthorPlotter(Plotter):
                 linewidth=0.5,
             )
             # Format x-axis as days of the week
-            axes[l].set_title(f"{pickupable.name} @ {receptacle.name}", fontsize=8)  # , y=0.85)
+            axes[l].set_title(f"{pickupable.name} @ {receptacle.name}", fontsize=8)
             axes[l].xaxis.set_major_locator(mdates.DayLocator())  # ticks per day
             axes[l].xaxis.set_major_formatter(mdates.DateFormatter("%a"))  # Mon, Tue, ...
 

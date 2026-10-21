@@ -26,7 +26,7 @@ class FilterState:
     # Update function modifies this
     last_observation_time: float
     log_likelihood: float = 0.0
-    log_lower_evidence_sum: Union[float, ArrayLike] = 0.0  # todo jax lax cond
+    log_lower_evidence_sum: Union[float, ArrayLike] = 0.0
     log_conditional_evidence: Union[float, ArrayLike] = 0.0
     log_lower_evidence_sum_is_none: bool = True
     decay_rate: float = 1.0

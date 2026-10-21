@@ -31,7 +31,7 @@ def main(args):
     n_sequences = args.n_seq
     viz = args.viz
     n_components = 2
-    # # Get data generation process parameters
+    # Data generation process parameters
     pi = np.array([0.7, 0.3])
     lambdas = np.array([500, 4500])
     plotter = Plotter(viz=viz, exp_name=f"{filter}_{prior}_learning")
