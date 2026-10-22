@@ -33,7 +33,7 @@ cuda = ["jax[cuda12]>=0.6.2,<0.9 ; sys_platform == 'linux'"]
 # Query Gemini for LLM switching-prior schedules that are not cached in models/.
 llm = ["google-genai>=1.49.0"]
 # SemiStaticSim (ProcTHOR) data loaders in perpetua2.data.procthor.
-procthor = ["semistaticsim>=0.5.12"]
+procthor = ["semistaticsim>=0.6.1,<0.7"]
 
 [dependency-groups]
 dev = ["pytest>=8.3"]

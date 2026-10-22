@@ -89,7 +89,7 @@ The schedules are saved next to the results as `llm_schedule_<seed>.json`. Set t
 
 ## Fitting estimators for Predictive Graphs
 
-Predictive Graphs uses one Perpetua* estimator per object of a [SemiStaticSim](https://github.com/Velythyl/SemiStaticSim) layout. With the `procthor` extra installed (2.5 to 3.5 hours on 4 CPU cores):
+Predictive Graphs uses one Perpetua* estimator per object of a [SemiStaticSim](https://pypi.org/project/semistaticsim/) layout. With the `procthor` extra installed (2.5 to 3.5 hours on 4 CPU cores):
 
 ```bash
 scripts/train_procthor.sh <layout> <path to the layout's SemiStaticSim privileged folder>

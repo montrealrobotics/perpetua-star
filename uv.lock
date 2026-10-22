@@ -1751,7 +1751,7 @@ requires-dist = [
     { name = "scienceplots", specifier = ">=2.2.0" },
     { name = "scipy", specifier = "==1.14.1" },
     { name = "seaborn", specifier = ">=0.13.2" },
-    { name = "semistaticsim", marker = "extra == 'procthor'", specifier = ">=0.5.12" },
+    { name = "semistaticsim", marker = "extra == 'procthor'", specifier = ">=0.6.1,<0.7" },
     { name = "tqdm", specifier = "==4.66.5" },
 ]
 provides-extras = ["cuda", "llm", "procthor"]
@@ -2592,7 +2592,7 @@ wheels = [
 
 [[package]]
 name = "semistaticsim"
-version = "0.5.12"
+version = "0.6.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "ai2thor" },
@@ -2618,9 +2618,9 @@ dependencies = [
     { name = "tiktoken" },
     { name = "wheel" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a1/21/b70a88b75dfb438594de3e741c0bbfebfb974824747310e846f704fa971e/semistaticsim-0.5.12.tar.gz", hash = "sha256:4e42ac2b9067fecbc5a59304e595a6402953208c12c0f6cdde9455ef8855e2e2", size = 90031, upload-time = "2026-01-14T03:18:38.635Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/aa/8a/5afb6b5f799730398b216f5fdda199ab1fa3126eb6eb685345d3d7a25a46/semistaticsim-0.6.1.tar.gz", hash = "sha256:ba5ce2c49a9ac2f92b170c139c70c8f9f1d8594c79ec32708f6b48ba0f27d3fa", size = 101467, upload-time = "2026-10-22T14:26:34.143Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/63/2e/0f99a986dbcf9bc70d902b57a91b875257f51d9c6bfc8469be0989180eb6/semistaticsim-0.5.12-py3-none-any.whl", hash = "sha256:d8121f1232c923aec1b108fc08889abb76fccac26a9fe3ec98ec4f1bfdba6a5a", size = 102999, upload-time = "2026-01-14T03:18:37.399Z" },
+    { url = "https://files.pythonhosted.org/packages/9e/4f/2498bb54f1302077a5962be9fb3cbccaf53631031331a9ac3892475ada0b/semistaticsim-0.6.1-py3-none-any.whl", hash = "sha256:8bc0f4e74172802ced3ff74ff64765def6cb94210c0ed3d5605d6cfaae297824", size = 116845, upload-time = "2026-10-22T14:26:35.274Z" },
 ]
 
 [[package]]
